@@ -1,0 +1,81 @@
+
+.carousel-overflow {
+  padding: 100px 0px 150px;
+
+  overflow: hidden;
+
+  @media (min-width: 1300px) {
+    margin: 0px 0px;
+  }
+
+}
+
+.carousel-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-header {
+    background-color: rgb(35, 35, 35);
+
+    border-radius: 10px 10px 0px 0px;
+
+    color: rgb(145,145,145);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 30px;
+    text-align: center;
+
+    font-family: "Bunday";
+    font-size: 1.3em;
+}
+
+.pokeball-icon img {
+    width: 4%;
+    color: rgb(145,145,145);
+    margin: 0px 5px;
+}
+
+.carousel-main {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(49, 49, 49);
+  width: 100%;
+  height: 370px;
+}
+
+
+.carousel-control-prev{
+    width: fit-content;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+    z-index: 3;
+}
+
+.prev-controller{
+    height: 92px;
+    width: 76px;
+    cursor: pointer;
+    background: url(../../../../../assets/icons/slider-btns.png) no-repeat 0 0;
+}
+
+.carousel-control-next{
+    width: fit-content;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+    z-index: 3;
+}
+
+.next-controller{
+    height: 92px;
+    width: 76px;
+    cursor: pointer;
+    background: url(../../../../../assets/icons/slider-btns.png) no-repeat 0 0;
+    background-position: -100px 0;
+}

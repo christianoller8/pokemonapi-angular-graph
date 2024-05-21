@@ -1,0 +1,97 @@
+.main {
+  background-image: url(../../../../../assets/images/container_bg.png);
+  background-color: white;
+}
+
+.pokemon-detail {
+  background-color: white;
+  margin: 0px 140px;
+}
+
+.poke-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+}
+.poke-name {
+  font-size: 60px;
+  letter-spacing: 4px;
+  font-family: "Teko", sans-serif;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+}
+.poke-id {
+  font-size: 30px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  color: rgb(168, 166, 166);
+}
+
+.poke-image {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.evolutions {
+  background-image: url(../../../../../assets/images/body_gray_bg.png);
+  background-color: rgb(139, 137, 137);
+  border-radius: 5px;
+  margin-top: 30px;
+  font-family: "Teko", sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+  text-underline-offset: 0px;
+}
+
+.evolutions-title {
+  color: white;
+  font-family: "Teko", sans-serif;
+
+  padding: 10px;
+
+}
+
+.poke-img-evo {
+  width: 50%;
+  margin-top: 40px;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+.evo-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.return-button {
+  background-color: #eb5d32;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.return-button:hover {
+  background-color: #da471b;
+  cursor: pointer;
+}
+
+.error{
+  width: 80%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10% 0%;
+}

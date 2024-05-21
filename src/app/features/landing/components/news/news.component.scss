@@ -1,0 +1,111 @@
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 85%;
+
+    background-color: white;
+
+}
+
+.left{
+    width: 70%;
+
+    height: fit-content;
+}
+
+.right{
+    width: 30%;
+    height: fit-content;
+
+    @media (max-width: 1300px) {
+        width: 70%;
+    }
+
+}
+
+.news {
+    overflow: hidden;
+    border-radius: 10px;
+    margin : 10px;
+}
+
+.news img{
+    width: 100%;
+    height: auto;
+}
+
+.news .text{
+    padding: 20px;
+    height: 100%;
+}
+
+.news1 .text{
+    background-color: rgb(27,83,186);
+}
+
+.title{
+    font-family: "Bunday";
+    font-size: 1.5em;
+    color: white;
+}
+
+.subtitle{
+    font-family: "Bunday";
+    font-size: 1.2em;
+    color: rgb(42,143,207);
+}
+
+.left-bottom{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left-bottom .news{
+    width: 46%;
+
+    @media (max-width: 1550px) {
+        width: 100%;
+    }
+}
+
+.news2 .text{
+    background-color: rgb(230,188,47);
+}
+
+.news3 .text{
+    background-color: rgb(255,144,196);
+}
+
+.news4 .text{
+    background-color: rgb(227,53,13);
+}
+
+.news5 .text{
+    background-color: rgb(133,90,201);
+}
+
+.news6 .text{
+    background-color: rgb(77,173,91);
+    height: 100%;
+}
+
+.news6{
+    display: flex;
+
+    @media (max-width : 1500px) {
+        flex-direction: column;
+    }
+}
+
+.news6 img{
+    width: 30%;
+    
+    @media (max-width : 1500px) {
+        width: 100%;
+    }
+}

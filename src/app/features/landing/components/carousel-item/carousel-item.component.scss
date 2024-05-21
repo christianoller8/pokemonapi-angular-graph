@@ -1,0 +1,193 @@
+@import "../../../../../styles.scss";
+
+$pokemonTypeRadius : 5px;
+
+.pokemon-card {
+    background-color: rgb(97, 97, 97);
+    height: 250px;
+    margin: 3px 1px;
+    position: relative;
+  }
+  
+  .description {
+    color: white;
+    font-family: "BundayLight";
+    font-size: 1.2em;
+    padding: 10px;
+  
+    background-color: rgb(49, 49, 49);
+  }
+  
+  .onlyVisible {
+    display: none;
+  }
+  
+  .showing {
+    display: block;
+  }
+  
+  td {
+    padding: 5px 10px;
+  }
+  
+  .mainInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+  }
+  
+  .pokename {
+    color: white;
+    padding: 5px;
+    font-family: "Bunday", sans-serif;
+    font-size: 1.4em;
+  }
+  
+  .pokeid {
+    display: none;
+    position: absolute;
+    right: 10px;
+  }
+  
+  .idBack {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  
+    font-family: "BundayBold", sans-serif;
+    font-size: 6.5em;
+    z-index: 2;
+  
+    color: black;
+    opacity: 0.2;
+  }
+  
+  .activeElement .pokeid {
+    display: block;
+  }
+  
+  .pokemon-card img {
+    position: relative;
+    width: auto;
+    height: 100%;
+  
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  .activeElement .pokemon-card {
+    margin: 3px 38px 0px 38px;
+    transform: scale(1.3, 1);
+    background-color: rgb(82, 82, 82);
+  }
+  
+  @keyframes popUpImg {
+    from {
+      transform: scale(0.77, 1);
+      opacity: 0.5;
+    }
+    to {
+      transform: scale(1, 1.3) translateY(-20px);
+      opacity: 1;
+    }
+  }
+  
+  .activeElement img {
+    transform: scale(0.77, 1);
+    animation-name: popUpImg;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  
+  .activeElement .description {
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgb(35, 35, 35);
+  }
+  
+  .activeElement .idBack {
+    color: white;
+    z-index: 0;
+  }
+
+  .types{
+    display: flex;
+  }
+
+  .normal{
+    $color : #a7a778;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .fire{
+    $color : #f08030;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .water{
+    $color : #6c8cdb;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .grass{
+    $color : #78c850;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .electric{
+    $color : #f8d030;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .ice{
+    $color : #95d3d3;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .fighting{
+    $color : #c03028;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .poison{
+    $color : #a040a0;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .ground{
+    $color : #ddbd68;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .flying{
+    $color : #a890f0;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .psychic{
+    $color : #f75888;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .bug{
+    $color : #9faa32;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .rock{
+    $color : #b8a038;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .ghost{
+    $color : #705898;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .dark{
+    $color : #705848;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .dragon{
+    $color : #7038f8;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .steel{
+    $color : #b8b8d0;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+  .fairy{
+    $color : #f0b6bc;
+    @include pokemonType($pokemonTypeRadius, $color);
+  }
+
+  .abilities{
+    display: flex;
+  }

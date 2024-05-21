@@ -1,0 +1,66 @@
+<div [ngClass]="{activeElement : position == activePosition}" routerLink="pokedex/pokemon/{{pokemonPreview.id}}" >
+
+    
+    <div class="pokemon-card">
+        <img
+          class="pokeimg"
+          [src]="
+            'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' +
+            pokemonPreview.id +
+            '.png'
+          "
+          alt="Pokemon sprite"
+        />
+        <div class="idBack">{{ pokemonPreview.id }}</div>
+      </div>
+      <div class="description">
+        <div class="mainInfo">
+          <div class="pokename">{{ pokemonPreview.name | titlecase }}</div>
+          <div class="pokeid">
+            {{ pokemonPreview.id }}
+          </div>
+        </div>
+        <div class="onlyVisible" [ngClass]="{ showing: position == activePosition }">
+          <table>
+            <tr>
+              <td>Type</td>
+              <td>
+                <div class="types">
+                    <div [class]="pokemonPreview.pokemon_v2_pokemontypes[0].pokemon_v2_type.name">
+                        {{
+                            pokemonPreview.pokemon_v2_pokemontypes[0].pokemon_v2_type.name
+                            | titlecase
+                        }}
+                    </div>
+                    <div *ngIf="pokemonPreview.pokemon_v2_pokemontypes[1]" [class]="pokemonPreview.pokemon_v2_pokemontypes[1].pokemon_v2_type.name">
+                        {{
+                            pokemonPreview.pokemon_v2_pokemontypes[1].pokemon_v2_type.name
+                            | titlecase
+                        }}
+                    </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Ability</td>
+              <td>
+                <div class="abilities">
+                    <div>
+                        {{
+                            pokemonPreview.pokemon_v2_pokemonabilities[0].pokemon_v2_ability
+                            .name | titlecase
+                        }}
+                    </div>
+                    <div *ngIf="pokemonPreview.pokemon_v2_pokemonabilities[1]">
+                        /{{
+                            pokemonPreview.pokemon_v2_pokemonabilities[1].pokemon_v2_ability
+                            .name | titlecase
+                        }}
+                    </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+</div>

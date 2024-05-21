@@ -1,0 +1,68 @@
+<div class="main">
+  <div class="pokemon-detail">
+    <ng-container *ngIf="visiblePokemon | async as pokemon ; else pokemonNotFound">
+      <div class="margin">
+        <div class="poke-info col-12">
+          <h2 class="poke-name">{{ pokemon.name | titlecase }}</h2>
+          <p class="poke-id">N.º {{ pokemon.id }}</p>
+        </div>
+      </div>
+      <div class="row" >
+        <div class="text-center">
+          <img
+            [src]="
+              'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' +
+              pokemon.id +
+              '.png'
+            "
+            alt="Pokemon sprite"
+            class="poke-image"
+          />
+        </div>
+        <div class="col-md-8"></div>
+      </div>
+      <div class="row evolutions p-4">
+        <h3 class="evolutions-title text-center fs-1">Evoluciones</h3>
+        <div class="d-flex justify-content-center align-items-center w-100">
+          <div
+            class="col-md-4 d-flex flex-column align-items-center"
+            *ngFor="
+              let pokemon of pokemon.pokemon_v2_evolutionchain
+                ?.pokemon_v2_pokemonspecies
+            "
+          >
+            <a routerLink="/pokedex/pokemon/{{ pokemon.id }}" class="text-center text-decoration-none">
+              <img
+                [src]="
+                  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' +
+                  pokemon.id +
+                  '.png'
+                "
+                alt="{{ pokemon.name }} sprite"
+                class="poke-img-evo"
+              />
+              <div class="evo-info pt-4">
+                <p>{{ pokemon.name | titlecase }} - </p>
+                <p class="p-1">{{ pokemon.id }}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-12">
+          <button class="return-button" routerLink="/pokedex">
+            Ir a la Pokédex
+          </button>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #pokemonNotFound>
+      <div class="error">
+        <h2 class="poke-name">Ups! This pokemon doesn't have more details</h2>
+      </div>
+    </ng-template>
+  </div>
+</div>

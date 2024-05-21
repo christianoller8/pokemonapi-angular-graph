@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="card-header">Sign In</div>
+  <div class="card-body" style="margin-top: 200px">
+    <form [formGroup]="loginForm" (submit)="signIn()">
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="username"
+          name="username"
+          class="form-control"
+          placeholder="name"
+          required
+          autofocus
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          formControlName="password"
+          name="password"
+          class="form-control"
+          placeholder="Password"
+          required
+          autofocus
+        />
+      </div>
+      <button class="btn btn-success mt-3">Sign In</button>
+    </form>
+  </div>
+</div>

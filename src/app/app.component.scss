@@ -1,0 +1,8 @@
+.margins{
+    padding: 0% 16%;
+    background-image: url(../assets/images/body_bg.png);
+
+    @media (max-width: 1300px) {
+        padding: 0px 0px;
+      }
+}

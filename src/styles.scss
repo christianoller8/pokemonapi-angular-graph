@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+@font-face {
+    font-family: BundayBold;
+    src: url(assets/fonts/bundayclean-bold.otf) format("opentype");
+}
+
+@font-face {
+    font-family: Bunday;
+    src: url(assets/fonts/BundayClean-Regular.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: BundayLight;
+    src: url(assets/fonts/BundayClean-Light.ttf) format("opentype");
+}
+
+@mixin pokemonType($borderRadius, $color){
+    border-radius: $borderRadius;
+    background-color: $color;
+    width: fit-content;
+    padding: 2px 5px;
+    margin: 0px 2px;
+}
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

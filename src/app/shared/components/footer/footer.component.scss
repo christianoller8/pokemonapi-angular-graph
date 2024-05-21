@@ -1,0 +1,52 @@
+.pokemon-footer {
+  background-color: #1f1f1f;
+  padding: 25px 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: white;
+}
+
+.footer-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.footer-text {
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.footer-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+.footer-list li {
+  margin-bottom: 10px;
+}
+
+.footer-list a {
+  color: #333;
+  color: white;
+  text-decoration: none;
+}
+
+.conditions {
+  list-style: none;
+  padding-left: 0;
+}
+
+.conditions li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.conditions a {
+  color: #333;
+  font-size: 24px;
+}

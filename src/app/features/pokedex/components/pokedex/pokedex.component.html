@@ -1,0 +1,36 @@
+<div class="main">
+  <div class="search container-form mt-3 mr-6" [hidden]="role !== 'Administrator'">
+    <mat-form-field color="warn" class="selector">
+      <mat-label>Order By</mat-label>
+      <mat-select>
+        <mat-option>Lowest Number</mat-option>
+        <mat-option>Highest Number</mat-option>
+        <mat-option>A - Z</mat-option>
+        <mat-option>Z - A</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="pokemon-list">
+    <div class="pokemon" *ngFor="let pokemon of visiblePokemon">
+      <a routerLink="pokemon/{{ pokemon.id }}" class="poke-link">
+        <img
+          [src]="
+            'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' +
+            pokemon.id +
+            '.png'
+          "
+          alt="Pokemon sprite"
+        />
+        <div class="pokemon-id">Nº. {{ pokemon.id }}</div>
+        <div class="pokemon-name" style="color: black">{{ pokemon.name }}</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="load-more" *ngIf="showLoadMoreBtn && !firstLoad" #loadMoreBtn>
+    <button class="charge-button" (click)="onLoadMoreBtnClick()">
+      Cargar más pokemon
+    </button>
+  </div>
+</div>
